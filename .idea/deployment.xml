@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="fanshengda@10.31.118.166:33260 agent" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="fanshengda@10.31.118.166:32453 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/bjzhyai03/workhome/fanshengda/workflowllm" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="fanshengda@10.31.118.166:33260 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/bjzhyai03/workhome/fanshengda/workflowllm_open" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
