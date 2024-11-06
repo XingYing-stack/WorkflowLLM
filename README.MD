@@ -67,14 +67,43 @@ This dataset consists of two primary components: (1) transcribed real-world data
 
 You can download the complete dataset from the following link: [Google Drive](https://drive.google.com/file/d/1ybvkAL6vU2IIMK0X_N1nsWFmcc7KWs_r/view?usp=sharing). Once downloaded, please unzip the contents into the directory `./data/`.
 
-The dataset includes the following files:
+The folder structure under `./data/` is as follows:
 
-- **Seed Data**: [./data/seed_data.json](./data/seed_data.json)  
-  This file contains the transcribed real-world data.
+```markdown
+./data/
+│
+├── dataset_split_keys.json
+├── dataset_split_keys_ood.json
+├── identifier2json.pkl
+├── identifier2python.pkl
+├── seed_data.json
+├── statistics.pkl
+└── synthesized_data.json
+```
 
-- **Synthesized Data**: [./data/synthesized_data.json](./data/synthesized_data.json)  
-This file contains the synthesized data generated for increasing the size and diversity of the dataset.
----
+
+Here are some descriptions for the `data` directory:
+
+- **dataset_split_keys.json**:  
+  This file contains the dataset split for unseen instructions (In Distribution, ID). It defines how the data is divided based on new instructions that have not been seen during training.
+
+- **dataset_split_keys_ood.json**:  
+  Similar to `dataset_split_keys.json`, but for unseen APIs (Out of Distribution, OOD). This file contains the split for instructions and APIs that are out of distribution, designed for testing how the model handles APIs that weren't seen during training.
+
+- **identifier2json.pkl**:  
+  A Python pickle file that stores API documentation in JSON format. The data is indexed by an API\'s identifier, and it is used to reference the APIs' descriptions, parameters, and other relevant details.
+
+- **identifier2python.pkl**:  
+  Another Python pickle file that stores API documentation but in Python-specific format. This data can be used to access the same API information, but formatted for Python usage (e.g., type hints, docstrings).
+
+- **seed_data.json**:  
+  This file contains the transcribed real-world data. This data serves as the "seed" data for building or augmenting the dataset.
+
+- **synthesized_data.json**:  
+  This file contains synthesized data generated to augment the dataset. The synthesized data helps increase the size and diversity of the dataset, ensuring that the model can generalize better.
+
+- **statistics.pkl**:  
+A statistics file that contains summary information, such as the API categories used by each workflow, the number of actions, the number of nestings, and so on.
 
 ## 🔧 Environment Setup
 
