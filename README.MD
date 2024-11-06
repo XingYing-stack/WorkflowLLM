@@ -1,40 +1,13 @@
 # WorkflowLLM: Enhancing Workflow Orchestration Capability of Large Language Models
-<div style="display: flex; gap: 8px; font-family: Arial, sans-serif;">
+<div align="center">
 
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Instances</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">106,763</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">APIs</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">1,503</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Applications</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">83</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Categories</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">28</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Avg. Actions</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">78.1</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Avg. Conditionals</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">7.4</span>
-  </div>
-
-  <div style="background-color: #555; color: white; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center;">
-    <span style="margin-right: 4px;">Avg. Loops</span>
-    <span style="background-color: #e57373; padding: 4px 8px; border-radius: 4px;">0.5</span>
-  </div>
+![Instances](https://img.shields.io/badge/Instances-106,763-red?style=flat-square)
+![APIs](https://img.shields.io/badge/APIs-1,503-red?style=flat-square)
+![Applications](https://img.shields.io/badge/Applications-83-red?style=flat-square)
+![Categories](https://img.shields.io/badge/Categories-28-red?style=flat-square)
+![Avg\_Actions](https://img.shields.io/badge/Avg.\_Actions-78.1-red?style=flat-square)
+![Avg\_Conditionals](https://img.shields.io/badge/Avg.\_IFs-7.4-red?style=flat-square)
+![Avg\_Loops](https://img.shields.io/badge/Avg.\_Loops-0.5-red?style=flat-square)
 
 </div>
 
