@@ -1,4 +1,4 @@
-# WorkflowLLM: Enhancing Workflow Orchestration Capability of Large Language Models
+g# WorkflowLLM: Enhancing Workflow Orchestration Capability of Large Language Models
 <div align="center">
 
 ![Instances](https://img.shields.io/badge/Instances-106,763-red?style=flat-square)
@@ -66,6 +66,7 @@ This dataset consists of two primary components: (1) transcribed real-world data
 ### Dataset Access
 
 You can download the complete dataset from the following link: [Google Drive](https://drive.google.com/file/d/1ybvkAL6vU2IIMK0X_N1nsWFmcc7KWs_r/view?usp=sharing). Once downloaded, please unzip the contents into the directory `./data/`.
+We also included 50 samples in the `./data/data_samples.json` file.
 
 The folder structure under `./data/` is as follows:
 
@@ -194,4 +195,11 @@ sh ./scripts/infer.sh {LOAD_PATH}
 
 ## Citation
 Feel free to us if you like WorkflowLLM.
+
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+
 
