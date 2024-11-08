@@ -1,0 +1,16 @@
+.tox
+*.pyc
+.plist
+build
+dist
+MANIFEST
+*.shortcut
+*.toml
+!examples/*.toml
+!examples/*.shortcut
+.coverage
+*.whl
+*.bin
+*.log
+.DS_Store
+.idea/
