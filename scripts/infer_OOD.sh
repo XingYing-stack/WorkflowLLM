@@ -14,4 +14,4 @@ fi
 LOG_FILE="./logs/eval_OOD_$(basename $MODEL_PATH).log"
 
 # 运行训练脚本并将输出保存到指定的日志文件中
-nohup accelerate launch ./code/train_bf16.py --load_path $MODEL_PATH --OOD --do_infer > $LOG_FILE 2>&1 &
+nohup accelerate launch ./src/train_bf16.py --load_path $MODEL_PATH --OOD --do_infer > $LOG_FILE 2>&1 &

@@ -65,8 +65,7 @@ This dataset consists of two primary components: (1) transcribed real-world data
 
 ### Dataset Access
 
-You can download the complete dataset from the following link: [Google Drive](https://drive.google.com/file/d/1ybvkAL6vU2IIMK0X_N1nsWFmcc7KWs_r/view?usp=sharing). Once downloaded, please unzip the contents into the directory `./data/`.
-We also included 50 samples in the `./data/data_samples.json` file.
+Due to the limitations of anonymous GitHub access（8 MB for each file）, we are only able to provide the sampled dataset here.
 
 The folder structure under `./data/` is as follows:
 
@@ -77,9 +76,8 @@ The folder structure under `./data/` is as follows:
 ├── dataset_split_keys_ood.json
 ├── identifier2json.pkl
 ├── identifier2python.pkl
-├── seed_data.json
+├── sampled_data.json
 ├── statistics.pkl
-└── synthesized_data.json
 ```
 
 
@@ -97,11 +95,8 @@ Here are some descriptions for the `data` directory:
 - **identifier2python.pkl**:  
   Another Python pickle file that stores API documentation but in Python-specific format. This data can be used to access the same API information, but formatted for Python usage (e.g., type hints, docstrings).
 
-- **seed_data.json**:  
-  This file contains the transcribed real-world data. This data serves as the "seed" data for building or augmenting the dataset.
-
-- **synthesized_data.json**:  
-  This file contains synthesized data generated to augment the dataset. The synthesized data helps increase the size and diversity of the dataset, ensuring that the model can generalize better.
+- **sampled_data.json**:
+  Due to the 8 MB file size limitation for anonymous GitHub uploads, we have only included a sampled subset of the data here. This file contains 300 real-world data entries and 300 synthetic data entries as training data, along with 50 test samples.
 
 - **statistics.pkl**:  
 A statistics file that contains summary information, such as the API categories used by each workflow, the number of actions, the number of nestings, and so on.
@@ -143,6 +138,32 @@ The format for each entry is shown in the figure below:
 
 ---
 
+## 🧹 Data Pruning
+
+### 1. GPT Pruning
+
+The pruning process optimizes and refines the generated data produced by WorkflowLlama, ensuring higher quality and relevance. To perform pruning, you can run the provided script as follows:
+
+
+Usage:
+
+```bash
+python ./src/prompt_GPT_for_prune.py --input_path <input_json_file> --save_path <output_json_file> --s <start_index> --t <end_index> --num_workers <num_threads>
+````
+Parameters:
+- `--input_path`: Path to the WorkflowLlama output JSON file to be pruned (before pruning).
+- `--save_path`: Path where the pruned data will be saved.
+- `--s`: Starting index (inclusive) for the range of data samples to prune.
+- `--t`: Ending index (inclusive) for the range of data samples to prune.
+- `--num_workers`: Number of worker threads to use for parallel processing during the pruning operation.
+### 2. Removing Empty Code and Filtering for API Consistency
+
+To ensure the generated code is valid and consistent with the API specifications, you can use the `check_workflow_code_validity()` function, located in `./src/rule_based_filtering.py`. This function filters out any empty code and performs additional checks for API consistency.
+
+
+
+---
+
 ## 🚅 Getting Started
 
 ### Overview
@@ -159,6 +180,7 @@ sh ./scripts/train.sh {BASE_MODEL_PATH} {DATA_PATH}
 - **{BASE_MODEL_PATH}**: The path to the pre-trained model or an initial checkpoint to fine-tune. Ensure this path is valid and points to a compatible model checkpoint or architecture.
 - **{DATA_PATH}**: The path to the dataset. 
 
+For example, one may execute the command `sh ./scripts/train.sh Meta-Llama-3.1-8B-Instruct ./data/sampled_data.json`.
 
 #### Additional Information:
 - The training process will automatically load the dataset, configure the model, and begin training.

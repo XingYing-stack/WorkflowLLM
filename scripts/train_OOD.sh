@@ -32,4 +32,4 @@ else
   echo "Training mode enabled."
 fi
 
-nohup accelerate launch ./code/train_bf16.py --load_path $MODEL_PATH --train_file $TRAIN_FILE --OOD --do_train $INFER_FLAG > $LOG_FILE 2>&1 &
+nohup accelerate launch ./src/train_bf16.py --load_path $MODEL_PATH --train_file $TRAIN_FILE --OOD --do_train $INFER_FLAG > $LOG_FILE 2>&1 &

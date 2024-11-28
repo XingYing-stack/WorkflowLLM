@@ -122,7 +122,7 @@ def convert_shortcut(input_filepath: str, title: str,) -> str:
 def main():
     parser = argparse.ArgumentParser(description='Shortcuts')
     parser.add_argument('file', nargs='?', help='Input file: *.(|shortcut|itunes url)', default='*')
-    parser.add_argument('--folder_path', help='Path to the folder containing shortcut files', default='../code/data/Merged Shortcuts Dataset')
+    parser.add_argument('--folder_path', help='Path to the folder containing shortcut files', default='../src/data/Merged Shortcuts Dataset')
     parser.add_argument('--excel_path', help='Path to the Excel file containing iCloud links', default=None)
 
     args = parser.parse_args()
@@ -157,7 +157,7 @@ def main():
 
                     if code is not None:
                         title2code[title]['shortcut'] = shortcut
-                        title2code[title]['code'] = code
+                        title2code[title]['src'] = code
 
         with open('case_study.pkl', 'wb') as file:
             pickle.dump(title2code, file)
