@@ -142,7 +142,7 @@ The format for each entry is shown in the figure below:
 
 ### 1. GPT Pruning
 
-The pruning process optimizes and refines the generated data produced by WorkflowLlama, ensuring higher quality and relevance. To perform pruning, you can run the provided script as follows:
+The pruning process optimizes and refines the generated data produced by the Annotator, ensuring higher quality and relevance. To perform pruning, you can run the provided script as follows:
 
 
 Usage:
